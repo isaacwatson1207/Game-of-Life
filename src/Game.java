@@ -36,8 +36,8 @@ public class Game {
          */
 
 
-        for (int i = 0; i < 100; i++) { // change this to be while stop button not pressed
-            board.update();
-        }
+//        for (int i = 0; i < 100; i++) { // change this to be while stop button not pressed
+//            board.update();
+//        }
     }
 }

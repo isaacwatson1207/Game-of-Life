@@ -22,15 +22,14 @@ public class Cell implements ActionListener {
         this.xcoord = xcoord;
         this.ycoord = ycoord;
         button.addActionListener(this);
-        button.setOpaque(true);
 
         int n = board.getBoardSize();
-        button.setBounds(10 + (xcoord * 300) / n, 10 + (ycoord * 300) / n, 250 / n,250 / n);
+        button.setBounds(150 + (xcoord * 300) / n, 10 + (ycoord * 300) / n, 250 / n,250 / n);
+        button.setBackground(Color.WHITE);
+        button.setForeground(Color.WHITE);
+        button.setOpaque(true);
+        button.setBorderPainted(false);
         board.add(button);
-        button.setBackground(Color.CYAN);
-        button.setForeground(Color.CYAN);
-        board.repaint();
-
 
     }
 
@@ -108,10 +107,12 @@ public class Cell implements ActionListener {
         if (dying) {
             isDead = true;
             dying = false;
+            button.setBackground(Color.white);
             //make button white
         } else if (reviving) {
             isDead = false;
             reviving = false;
+            button.setBackground(Color.black);
             //make button black
         }
     }
